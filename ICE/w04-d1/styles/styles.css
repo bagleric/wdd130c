@@ -70,3 +70,39 @@ Relative
     vh
 
 */
+
+p {
+  color: black;
+}
+
+#test {
+  color: black;
+}
+
+.test {
+  color: black;
+}
+
+p.test {
+  color: black;
+}
+
+p .test {
+  color: black;
+}
+
+p > .test {
+  color: black;
+}
+
+p#test {
+  color: black;
+}
+
+p #test {
+  color: black;
+}
+
+p > #test {
+  color: black;
+}
