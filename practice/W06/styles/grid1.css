@@ -1,0 +1,35 @@
+.grid-container {
+  display: grid;
+  /* grid-template-rows: 100px 1fr 50px; */
+  /* grid-template-columns: 200px 1fr; */
+  height: 400px;
+  gap: 10px;
+  grid:
+    100px 1fr 50px /*row*/
+    / 200px 1fr /*columns*/;
+}
+
+/* Place items using named grid lines */
+header {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+aside {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+footer {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+}
+
+* {
+  border: 1px solid black;
+}

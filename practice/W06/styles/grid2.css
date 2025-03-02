@@ -1,0 +1,44 @@
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 100px 1fr 50px;
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+} */
+
+/* this one is probably my favorite because it actually looks like the page. */
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  height: 400px;
+  grid-template:
+    "header  header" 100px
+    "sidebar main" 1fr
+    "footer  footer" 50px
+    / 200px 1fr;
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: main;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+* {
+  border: 1px solid black;
+  padding: 1em;
+  border-radius: 0.5em;
+}

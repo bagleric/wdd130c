@@ -1,0 +1,50 @@
+/** ID selector */
+#active {
+  background-color: white;
+  color: pink;
+}
+
+/** Class selector */
+.main-para {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+/** Tag Selector */
+/* nav {
+  background-color: steelblue;
+  color: white;
+  padding: 10px;
+} */
+
+/** Multiple Selectors */
+/* nav, footer {
+  background-color: navy;
+  color: white;
+  padding: 10px;
+  text-align: center;
+} */
+
+/* Step: 
+    We have two paragraphs in our HTML. But we want to target only the paragraph that is inside the footer, not the paragraph in main. We want to make it a different font-size. If we target the p element, both paragraphs will change. We could give one of them a class or ID as well and target that, but let's use a descendant selector instead. 
+    We can write our selector with the parent element first and then the child (or descendant next).
+*/
+/** Descendant selector  */
+/* footer p {
+    font-size: 20px;
+    margin: 20px auto;
+} */
+
+/* Example
+In this example, we will be adding a selector for a pseudo-class.
+
+Pseudo-classes require some interaction by the user in order for the style to be applied. For example, with the :hover pseudo-class the styles will only be applied if the user is hovering their mouse pointer over the element.
+
+Let's change the background and font color of our menu links when the user hovers over them. This will be a new rule, not an addition to any existing a rule. */
+
+/** Pseudo Classes */
+a:hover {
+  background-color: white;
+  color: steelblue;
+}
+/* Now when your mouse pointer rests on top (or hovers over) the links, without the class of active, in the nav the background and text colors should change. */

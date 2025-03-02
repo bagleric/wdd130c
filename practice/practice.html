@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BYUI</title>
+
+    <link
+      rel="stylesheet"
+      href="styles/styles.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a
+          id="active"
+          href="byui.html"
+          >Home</a
+        >
+        <a href="https://www.churchofjesuschrist.org">Church of Jesus Christ</a>
+        <a href="https://www.churchofjesuschrist.org/temples">Temples</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures"
+          >Scriptures</a
+        >
+      </nav>
+    </header>
+    <main>
+      <h1>Brigham Young University Idaho</h1>
+      <img src="https://www.byui.edu/images/service-sites/map-banner.jpg" />
+      <p class="main-para">
+        BYU-Idaho is a comfortable place to learn and grow as a disciple of
+        Jesus Christ because students, faculty, and employees share a commitment
+        to live the gospel.
+      </p>
+    </main>
+    <footer>
+      <p>My Web Page 20XX &copy</p>
+    </footer>
+  </body>
+</html>
+
+<!-- TODO: CSS Selectors -->
+<!-- 
+Example: Selecting Multiple Elements, Applying the same rules
+* If I wanted to apply the same style declaration to multiple elements, I could use a comma between selectors. 
+
+* For example if we want to have a background color of navy and a font color of white for both our nav and our header we can use a comma between them to say that we can both selectors to have the rule applied to them.
+
+nav, footer {
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+}
+
+* Notice that both the nav and footer were styled with the one rule set.
+
+* If you already had a declaration with nav earlier, you can add the footer to the selector rule so you don't have repeated CSS.
+
+Example: Descendant Selector
+* In this example, we will look at selecting elements that are descendants of other elements.
+
+* We have two paragraphs in our HTML. But we want to target only the paragraph that is inside the footer, not the paragraph in main. We want to make it a different font-size. If we target the p element, both paragraphs will change. We could give one of them a class or ID as well and target that, but let's use a descendant selector instead.
+
+* We can write our selector with the parent element first and then the child (or descendant next).
+
+footer p {
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+* So the descendant selector is only targeting the p that is inside footer. It could be a child p, a grandchild p, and so on as long as it's inside footer.
+
+Example: Pseudo Classes
+* In this example, we will be adding a selector for a pseudo-class.
+
+* Pseudo-classes require some interaction by the user in order for the style to be applied. For example, with the :hover pseudo-class the styles will only be applied if the user is hovering their mouse pointer over the element.
+
+* Let's change the background and font color of our menu links when the user hovers over them. This will be a new rule, not an addition to any existing a rule.
+
+a:hover {
+    background-color: white;
+    color: steelblue;
+}
+
+* Now when your mouse pointer rests on top (or hovers over) the links, without the class of active, in the nav the background and text colors should change.
+
+
+
+-->
+
+<!-- TODO: Block Vs Inline -->
+<!-- 
+Example: Block vs Inline
+* Our page has some elements that are inline and some that are block. The img and a tags are inline elements. That is why the nav links line up one after another on one line. If we had two images with smaller width next to each other they would also line up next to each other as well. Let's add another image and give them a small width so you can see that. Copy and paste the img tag so you have two of the same image.
+
+<main>
+    <h1>Brigham Young University Idaho</h1>
+    <img src="https://www.byui.edu/images/service-sites/map-banner.jpg">
+    <img src="https://www.byui.edu/images/service-sites/map-banner.jpg">
+    <p>BYU-Idaho is a comfortable place to learn and grow as a disciple of Jesus Christ because students, faculty, and employees share a commitment to live the gospel.</p>
+</main>
+
+* Let's give them both a width of 30%. You may have to replace a width value you already had.
+
+img {
+    width: 30%;
+}
+
+* Notice that both images are on the same line because they have room. Now that we've seen that images are inline, take the extra image back out of your HTML.
+
+<main>
+    <h1>Brigham Young University Idaho</h1>
+    <img src="https://www.byui.edu/images/service-sites/map-banner.jpg">
+    <p>BYU-Idaho is a comfortable place to learn and grow as a disciple of Jesus Christ because students, faculty, and employees share a commitment to live the gospel.</p>
+</main>
+
+* And change your image width to 80%.
+
+img {
+    width: 80%;
+}
+
+* Many of the other elements like nav, h1, and p are block-level elements. This means that they take up all the room they can. Let's put a border around every elements so we can see this easily.
+
+* {
+    border: 2px solid blue;
+}
+
+*The nav and h1 or example take up all the room available from left to right. The paragraphs also take up all the room they are given. If they have a width given to them, then they take up as much space within that width as they can. Notice the image and a elements that are inline have a tight border around them.
+
+Example: Centering
+* In this example, we will be centering block and inline elements on our page.
+
+* Let's delete any body centering from past weeks so we can practice centering different elements on our page.
+
+* Delete the following if you have it in your styles.css file:
+
+body {
+    text-align: center;
+}
+
+* We just deleted the centering we had for the entire body that many of the elements inherited. Let's center some elements individually now.
+
+* To center content inside their container, we can use text-align: center. We can center our h1 with text-align: center and it will center within it's container because there is space left over after the text and before the end of the element.
+
+* You may have already had the h1 rule with a color property and that's fine just leave it and add the text-align: center to the h1 rule set.
+
+h1 {
+    text-align: center;
+}
+We can do the same centering with our nav and footer because they are also block level elements.
+
+Again, that rule set may have other declarations that you can just leave and add the text-align: center to them.
+
+nav, footer {
+    text-align: center;
+}
+* If we try to center the img element the same way, with text-align: center, it won't work because there is no extra space inside it's container. Text-align center will center the content of its container. With images we want to center the container itself. To give it some extra space, let's have it take the whole amount available and change its display property to display: block. Now to center it we can center the container itself with margin: 0 auto. Remember, however, if the image itself takes up 100% of the space it won't appear to center either. So it's a good idea to give it a width and use margin: 0 auto together.
+
+img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+* Now the image should be centered. The zero in margin: 0 auto, refers to the top and bottom margin and the auto will automatically place an equal amount of space on the right and left to center it.
+
+* Let's center the paragraph container, that is inside main, in the same way. Give it a width of 80% and give it a margin: 0 auto.
+
+main p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+* We didn't have to put display: block because p elements are already block-level elements.
+
+* If we want to also center the content of the container, we could add a text-align: center as well and the paragraph would center inside the container as well.
+
+main p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+* I like it left aligned inside the container, so I won't add the text-align: center. But you can leave it if you like.
+
+* If I wanted to add some more margin to the top and bottom of my paragraph I can increase the zero and add a pixel size.
+
+main p {
+    width: 80%;
+    margin: 50px auto;
+    /* margin: all */
+    /* margin: top sides */
+    /* margin: top right bottom left */
+    text-align: center;
+}
+
+* Now we can see how to center containers and content of containers. And the elements inside our main section are centered nicely.
+
+* Let's take off the borders if you haven't already. Delete the following rule-set:
+
+* {
+    border: 2px solid blue;
+}
+
+* So there we have a few different ways to center items on your page keeping in mind the difference between block and inline elements.
+ -->
+
+<!-- 
+Units of Measurement
+Absolute vs. Relative
+* Absolute units of measurements are fixed and appear as exactly that size. A common absolute unit of measurement is px or pixels.
+
+* Relative units of measurement specify a size relative to another property size. Relative units are better for responsive pages, or in other words, the elements size relative to what device the user is rendering the page on. Common relative units of measurement include em and % (percentages).
+
+Example: Units of measurement
+* In this example, we will be adding values and units of measurement to your CSS.
+
+* Remember if you already have CSS rules targeting an element that you will be asked to give a new rule to, it's best to replace or combine your declarations with the rule you already have in CSS. This makes our code clean and efficient.
+
+* Right now the image of BYUI is rendering on our page in whatever size it was when it was created. If our page is narrow, like on a phone the image will get cut off and only the left edge will show. If our monitor is very large there might be a lot of space after the image to the right. If we give the image a pixel size like width: 800px it will always be 800px wide again, regardless of the width of the device.
+
+* Let's make it more responsive by giving it a percentage unit of measurement. Always put units of measurement in CSS not in HTML.
+
+* Depending on other practice modules you've completed may already have that width measurement for img in your CSS.
+
+img {
+    width: 80%;
+}
+* Notice as you resize the page the image always remains at 80% of the page. Play around with other percentages to see how it looks.
+
+* You can also give the paragraph 80% width as well.
+
+p {
+    width: 80%;
+}
+
+Example Navigation Links
+* Let's use the em unit of measurement to change the font size of our navigation links. Since we haven't changed the font size of our default body, we know that 16px is our starting point. If we want our font size to be one and a half times as big (16 + 8 = 24px), we can use 1.5em.
+
+*Add this to what may already be in the 'a' rule set.
+
+a {
+    font-size: 1.5em;
+}
+
+*Now the text size of our links are bigger and easier to read.
+
+* Centering elements, and giving them breathing room with margins and paddings also uses units of measurement, but those will be covered in other learning modules ('Block vs. Inline' and 'Box Model').
+ -->

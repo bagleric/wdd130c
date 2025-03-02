@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap");
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color-rgb: 0, 48, 91;
+  --primary-color: rgb(var(--primary-color-rgb));
+  --secondary-color: rgb(234, 244, 246);
+  --accent1-color: rgb(241, 116, 116);
+  --accent2-color: white;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: Tangerine, "Lucinda";
+  --paragraph-font: Poppins, Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: var(
+    --primary-color
+  ); /* headlines on a white background */
+  --headline-color-on-color: var(
+    --secondary-color
+  ); /* headlines on a colored background */
+  --paragraph-color-on-white: var(
+    --primary-color
+  ); /* paragraph text on a white background */
+  --paragraph-color-on-color: var(
+    --secondary-color
+  ); /* paragraph text on a colored background */
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--accent2-color);
+  --nav-background-color: var(--primary-color);
+  --nav-hover-link-color: var(--primary-color);
+  --nav-hover-background-color: var(--accent1-color);
+}
+
+body {
+  font-family: var(--paragraph-font);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+header {
+  & img {
+    padding: 1em;
+    width: 120px;
+  }
+  background-color: var(--nav-background-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  & nav {
+    & a {
+      text-decoration: none;
+      padding: 1em;
+      color: var(--nav-link-color);
+      &:hover {
+        background-color: var(--nav-hover-background-color);
+        color: var(--nav-hover-link-color);
+      }
+    }
+  }
+}
+
+.hero {
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  & .image-container {
+    & img {
+      width: 100%;
+      margin-top: -40%;
+    }
+    height: 100%;
+    overflow: hidden;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+  }
+  & .heading {
+    text-align: right;
+    color: var(--secondary-color);
+    opacity: 1;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    background-color: rgb(var(--primary-color-rgb), 0.75);
+    z-index: 1;
+    padding: 1em;
+    display: grid;
+    align-content: space-evenly;
+  }
+}
+
+h1 {
+  font-size: 32pt;
+  font-weight: 500;
+}
+h2 {
+  font-size: 24pt;
+  font-weight: 400;
+}
+h3 {
+  font-size: 18pt;
+  font-weight: 300;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: stretch;
+  gap: 1em;
+  padding: 1em;
+
+  & .feature-image {
+    & img {
+      margin-top: -300px;
+      width: 100%;
+    }
+    max-height: 700px;
+    overflow: hidden;
+  }
+  & .feature-box {
+    padding: 1em 4em;
+    align-self: stretch;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    &:nth-child(3n) {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+    }
+  }
+}
+
+.feature-box a {
+  background-color: var(--accent1-color);
+  color: black;
+  text-decoration: none;
+  padding: 1em;
+  border-radius: 10px;
+}
+.feature-box a:hover {
+  box-shadow: 4px 4px 4px gray;
+}
+
+/* TODO: add border radius on the buttons */
+/* TODO make the picture rounded */

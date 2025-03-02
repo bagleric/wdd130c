@@ -1,0 +1,121 @@
+<head>
+  <style>
+    /* which is the best and why? Does it depend? */
+    /*the space neans nested or inside */
+    .circle img {
+      /* won’t work to do what we want It selects images nested inside of another element that has the class of "circle" */
+    }
+
+    .circle {
+      /*all elements with the "circle" class */
+    }
+
+    .circlesbox img.circle {
+    }
+
+    .circlesbox {
+      /* won’t work to do what we want but selects elements with the class of "circlesbox"  */
+    }
+
+    .circlesbox.circle {
+    }
+
+    body div.circlesbox .circle {
+      /* all elements with "circle" class inside diva with "circlesbox" class AND also inside the body tag */
+    }
+
+    body div.circlesbox img.circle {
+      /* all images with "circle" class inside divs with "circlesbox" class AND also inside the body tag */
+    }
+
+    body div.circlesbox.circle {
+    }
+
+    circlesbox .circle {
+      /*all elements with the "circle" class that are inside an element with "circlesbox" class */
+    }
+
+    circlesbox img .circle {
+      /* won’t work but tries to select images inside elements with the class of "circlesbox" that also has a class of circle inside an image, which generally is never done because you don’t usually close the img tag */
+    }
+
+    circlesbox img {
+      /* all images inside a "circlesbox" class element  */
+    }
+
+    circlesbox img.circle {
+      /* all images with the "circle" class that are inside an element with "circlesbox class  */
+    }
+
+    div img {
+      /*all images inside a div*/
+    }
+
+    div img.circle {
+      /* all images with "circle" class inside divs */
+    }
+
+    div.circle {
+      /* won’t work to do what we want but selects divs with the class of "circle" */
+    }
+
+    div .circle {
+      /*all elements with the "circle" class inside divs */
+    }
+
+    div.circlesbox .circle {
+    }
+
+    div.circlesbox img {
+      /* all inages inside divs with "circlesbox" class */
+    }
+
+    div.circlesbox img.circle {
+      /* all images with "circle" class inside divs with "circlesbox" class */
+    }
+
+    div.circlesbox {
+      /* won’t work to do what we want but selects divs with the class of "circlesbox"  */
+    }
+
+    div.circlesbox.circle {
+      /*all elements with the "circle" class that are inside a div with "circlesbox" class  */
+    }
+
+    div.img {
+      /* is incorrect you should probably not use a class named "img" since img is an element of its own */
+    }
+
+    img circle {
+      /* won’t work but tries to select an image with a class of "circle" inside an image, which generally is never done because don’t usually close the img tag so you can’t have somethimg with a class in it */
+    }
+
+    img {
+      /* works but does the top inage too It does all images */
+    }
+
+    img.circle {
+      /*all images with "circle" class */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circlesbox">
+    <img
+      class="circle"
+      src="https://byui-wdd.github.io/wdd130/ice/w05_ice_image_desk.jpg"
+      alt="designer desk"
+    />
+    <img
+      class="circle"
+      src="https://byui-wdd.github.io/wdd130/ice/w05_ice_image_graphic.png"
+      alt="graphic logo"
+    />
+    <img
+      class="circle"
+      src="https://byui-wdd.github.io/wdd130/ice/w05_ice_image_person.jpg"
+      alt="Thomas DeSantos"
+    />
+  </div>
+</body>
