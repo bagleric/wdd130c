@@ -35,6 +35,41 @@
         text-align: center;
         font-family: "Roboto Slab", serif;
       }
+      .card .main p {
+        color: #8b808b;
+        line-height: 1.3em;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1em;
+        font-weight: 400;
+      }
+      .card footer {
+        background-color: #3f5b8a;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        text-align: center;
+        font-size: 23px;
+        color: white;
+        height: 80px;
+      }
+      .card footer > .detail {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto auto;
+        align-content: center;
+      }
+      .card footer sup {
+        font-size: x-small;
+      }
+      .card footer .detail div:nth-of-type(2) {
+        text-transform: uppercase;
+        font-size: x-small;
+        align-self: center;
+      }
+      .card footer .detail:not(:last-child) {
+        border-right: 1px solid grey;
+      }
     </style>
   </head>
   <body>
